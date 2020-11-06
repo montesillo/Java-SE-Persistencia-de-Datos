@@ -5,12 +5,20 @@
  */
 package com.mycompany.mensajes_app;
 
+import java.sql.Connection;
+
 /**
  *
  * @author monte
  */
 public class Inicio {
     public static void main(String[] args){
+        Conexcion conexion = new Conexcion();
         
+        try(Connection cnx = conexion.get_connection()){
+            
+        }catch(Exception e) {
+            System.out.println(e);
+        }
     }
 }
